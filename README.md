@@ -101,6 +101,7 @@ The current firmware uses Q_OUT on GPIO26/ADC0 for USB receive audio; I_OUT on G
 
 <p align="center">
   <img src="docs/images/at-dx1-prototype-v1.0.jpg" alt="AT-DX1 V1.0 prototype" width="760">
+  <img src="docs/images/IMG_1461.jpeg" alt="AT-DX1 V1.0 prototype & Phone" width="760">
 </p>
 
 ## Repository layout
