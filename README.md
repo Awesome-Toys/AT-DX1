@@ -8,6 +8,8 @@
 
 AT-DX1 is an experimental HF transceiver project by **ZL1DMM**. It combines an RP2354A microcontroller, Si5351A RF synthesis, a quadrature-sampling receiver, a compact 74ACT244-based transmitter, USB audio/CAT integration, and onboard CW processing on one small board.
 
+Designed by ZL1DMM. Inspired in part by WB2CBA’s TinyDX and its use of the 74ACT244 as an HF PA driver.
+
 This repository snapshot is centred on the **RP2354A V1.0 hardware dated 2026-09-14** and the current RP2350/RP2354A firmware snapshot dated **2026-09-12**.
 
 <p align="center">
