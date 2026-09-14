@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/at-dx1-app-icon.png" alt="AT-DX1 logo" width="190">
+  <img src="docs/images/banner.png" alt="AT-DX1 banner" width="100%">
 </p>
 
 # AT-DX1
