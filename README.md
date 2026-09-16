@@ -76,10 +76,10 @@ Full procedure and interpretation: [I/Q calibration guide](docs/IQ_CALIBRATION.m
 
 A practical first-use sequence is:
 
-1. Flash `firmware/source/AT-DX1.ino` to the RP2354A.
+1. Flash [`firmware/AT-DX1.ino`](firmware/AT-DX1.ino) to the RP2354A.
 2. Run the I/Q calibration once with the 14.075 MHz / ~-60 dBm test carrier.
 3. For FT8/FT4, select the AT-DX1 USB audio input/output and TS-480-style CAT port in the host application.
-4. For CW, build/install the Android app from `android-app/source/`, connect the radio, select a band/frequency and listen/decode the signal fixed at the centre of the waterfall.
+4. For CW, install [`android-app/app-debug.apk`](android-app/app-debug.apk), connect the radio, select a band/frequency and listen/decode the signal fixed at the centre of the waterfall.
 5. Verify RF output and harmonic suppression into a 50-ohm dummy load before connecting an antenna.
 
 See [Operating guide](docs/OPERATING_GUIDE.md) and [Command reference](docs/COMMAND_REFERENCE.md).
@@ -122,10 +122,10 @@ For normal same-band tuning, the fixed integer MS0 divider is retained and only 
 | `hardware/schematic/` | Current schematic export |
 | `hardware/fabrication/` | Manufacturer-ready Gerber ZIP |
 | `hardware/bom/` | Normalized BOM plus original EasyEDA export |
-| `firmware/source/AT-DX1.ino` | Current RP2350/RP2354A firmware |
+| `firmware/AT-DX1.ino` | Current RP2350/RP2354A firmware |
 | `firmware/README.md` | Firmware features and build notes |
-| `android-app/source/` | Current Android Studio source project (v1.23) |
-| `android-app/README.md` | Android app architecture/build notes |
+| `android-app/app-debug.apk` | Installable Android CW companion app |
+| `android-app/README.md` | Android app architecture and installation notes |
 | `docs/IQ_CALIBRATION.md` | I/Q calibration procedure |
 | `docs/OPERATING_GUIDE.md` | FT8/FT4 and CW operating guide |
 | `docs/COMMAND_REFERENCE.md` | Basic CAT/CW/test command reference |
@@ -163,7 +163,7 @@ AT-DX1 is not affiliated with or endorsed by WB2CBA. See [ACKNOWLEDGEMENTS.md](A
 
 ## Project status
 
-**Prototype / active development.** Hardware files represent the 2026-09-14 RP2354A V1.0 snapshot. Current firmware and Android v1.23 source are included and will continue to evolve as on-air and bench testing progresses.
+**Prototype / active development.** Hardware files represent the 2026-09-14 RP2354A V1.0 snapshot. The current firmware and installable Android APK are included and will continue to evolve as on-air and bench testing progresses.
 
 ## Licensing
 
