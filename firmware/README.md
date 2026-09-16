@@ -23,19 +23,54 @@ It targets the RP2350A/RP2354A hardware used on the AT-DX1 V1.0 PCB.
 - Android app owns CW noise blanking, 300 Hz filtering, AGC, S-meter, waterfall, BFO and Morse decode.
 - Serial bench-test and diagnostic commands.
 
-## Build environment
+## Arduino IDE build environment
 
-The sketch includes/depends on:
+AT-DX1 uses the **Earle F. Philhower Arduino-Pico core** with RP2350 support.
 
-- Arduino framework
-- Earle Philhower Arduino-Pico core with RP2350 support
+Add this Boards Manager URL in Arduino IDE under **File -> Preferences -> Additional Boards Manager URLs**:
+
+`https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
+
+Then install **Raspberry Pi Pico/RP2040/RP2350 by Earle F. Philhower** from Boards Manager.
+
+The sketch also depends on:
+
 - Adafruit TinyUSB
 - Arduino Audio Tools
-- Pico SDK hardware headers supplied through the RP2350 Arduino core
+- Pico SDK hardware headers supplied by the Arduino-Pico core
 
-Select an **RP2350A-compatible target** corresponding to the RP2354A/QFN-60 hardware. The source intentionally rejects RP2040 and RP2350B builds.
+## Exact Arduino IDE board settings
 
-`core1_separate_stack = true` is intentionally enabled.
+Use these settings for the AT-DX1 RP2354A PCB:
+
+| Arduino IDE option | Selection |
+|---|---|
+| Board | **Generic RP2350** |
+| Chip Variant | **RP2350A** |
+| CPU Architecture | **ARM** |
+| CPU Speed | **150 MHz** |
+| Flash Size | **2MB (no FS)** |
+| PSRAM Size | **0 MB** |
+| PSRAM CS | **None** |
+| USB Stack | **Adafruit TinyUSB** |
+| Upload Method | **Default (UF2)** |
+
+The AT-DX1 uses the **RP2354A**, which is the RP2350A/QFN-60 variant with 2 MB stacked flash. Do not select RP2040, RP2350B, RISC-V, or a Pico/Pico 2 board profile for this firmware.
+
+The source contains compile-time checks and intentionally rejects RP2040 and RP2350B builds.
+
+`core1_separate_stack = true` is intentionally enabled and should be left unchanged.
+
+## Compiling and uploading
+
+1. Open [`AT-DX1.ino`](AT-DX1.ino) in Arduino IDE.
+2. Select **Generic RP2350** and apply the exact settings above.
+3. Install any missing libraries if Arduino IDE reports them during compilation.
+4. Click **Verify** to compile.
+5. For UF2 programming, place the AT-DX1 into BOOTSEL mode so the RP2354A appears as a USB mass-storage device.
+6. Use the Arduino IDE upload process or copy the generated UF2 file to the RP2354A BOOTSEL drive.
+
+If the board is already running AT-DX1 firmware and normal USB upload is not available, BOOTSEL/UF2 programming is the most reliable recovery method.
 
 ## CW frequency semantics
 
