@@ -2,7 +2,7 @@
 
 The current firmware is:
 
-`source/AT-DX1.ino`
+[`AT-DX1.ino`](AT-DX1.ino)
 
 It targets the RP2350A/RP2354A hardware used on the AT-DX1 V1.0 PCB.
 
