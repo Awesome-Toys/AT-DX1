@@ -4,7 +4,7 @@ This page describes the basic current workflow. AT-DX1 remains an experimental Q
 
 ## 1. First setup
 
-1. Flash the current `firmware/source/AT-DX1.ino`.
+1. Flash the current [`firmware/AT-DX1.ino`](../firmware/AT-DX1.ino).
 2. Connect the radio by USB.
 3. Run the built-in I/Q calibration once using the procedure in [IQ_CALIBRATION.md](IQ_CALIBRATION.md).
 4. Confirm the supported band LEDs and CAT frequency control work.
@@ -28,6 +28,8 @@ Typical WSJT-X concept:
 CAT PTT alone does not intentionally create a normal FT8 carrier. The firmware also requires valid incoming digital-mode audio for the normal transmit path.
 
 ## 3. CW with the Android app
+
+Install [`android-app/app-debug.apk`](../android-app/app-debug.apk) on the Android phone, then connect the AT-DX1 by USB.
 
 The app sends the actual wanted RF frequency. If the display says 14.060000 MHz, then:
 
