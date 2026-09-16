@@ -1,12 +1,10 @@
 # AT-DX1 Android CW companion app
 
-The current Android Studio source project is under:
+The current installable Android package is:
 
-`source/`
+[`app-debug.apk`](app-debug.apk)
 
-Current source version: **v1.23 / 1.23.0**.
-
-The app works with the 2026-09-16 centred-CW AT-DX1 firmware. The radio handles RF tuning, band limits, USB-sideband receive and Morse TX timing; the phone handles the CW receive presentation/DSP.
+This APK is intended to work with the 2026-09-16 centred-CW AT-DX1 firmware. The radio handles RF tuning, band limits, USB-sideband receive and Morse TX timing; the phone handles the CW receive presentation/DSP.
 
 ## Current CW receive architecture
 
@@ -38,11 +36,11 @@ The app receive chain is:
 - Live text-to-CW transmit via the radio-side keyer.
 - TX WPM control.
 
-## Source/build notes
+## Installation
 
-The `source/` directory contains the Kotlin/Android Gradle project, `GRADLE_SETUP.txt` wrapper/setup notes, and `DSP_VALIDATION.txt` centred-channel filter checks.
+Download `app-debug.apk` to the Android phone and install it. Android may ask for permission to install apps from the browser/file-manager used to open the APK.
 
-The existing `AT-DX1 CW.apk` at this repository level is an older binary snapshot and may lag the current source. Build v1.23 from `source/` for the current centred-waterfall implementation.
+The Android Studio source project is not currently included in this repository. The packaged APK is provided for normal AT-DX1 use.
 
 ## USB protocol used by the app
 
